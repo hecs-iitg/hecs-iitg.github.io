@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1200 1100">
+    
+    <defs>
+      <linearGradient id="dropGrad" x1="0" y1="0" x2="1" y2="1">
+        <stop offset="0%" stop-color="#1593EA"/><stop offset="58%" stop-color="#005BBB"/><stop offset="100%" stop-color="#0B2342"/>
+      </linearGradient>
+      <linearGradient id="flameGrad" x1="0" y1="0" x2="0.8" y2="1">
+        <stop offset="0%" stop-color="#FFB20D"/><stop offset="55%" stop-color="#FF8A00"/><stop offset="100%" stop-color="#F04A00"/>
+      </linearGradient>
+      <linearGradient id="orbitGrad" x1="0" y1="0" x2="1" y2="0">
+        <stop offset="0%" stop-color="#00A79D"/><stop offset="100%" stop-color="#004E9B"/>
+      </linearGradient>
+      <linearGradient id="pistonGrad" x1="0" y1="0" x2="1" y2="0">
+        <stop offset="0%" stop-color="#AEB8C3"/><stop offset="30%" stop-color="#F2F4F6"/><stop offset="52%" stop-color="#6D7F91"/><stop offset="75%" stop-color="#D9DEE5"/><stop offset="100%" stop-color="#0B2342"/>
+      </linearGradient>
+      <filter id="softShadow" x="-20%" y="-20%" width="140%" height="140%">
+        <feDropShadow dx="0" dy="4" stdDeviation="5" flood-opacity="0.12"/>
+      </filter>
+      <path id="bottomArc" d="M 190 884 A 455 455 0 0 0 1010 884"/>
+    </defs>
+    <g transform="translate(0,-10)"><path d="M 1103 594 A 505 505 0 1 1 890 136" fill="none" stroke="#0B2342" stroke-width="16" stroke-linecap="round"/><path d="M 1076 592 A 478 478 0 1 1 874 158" fill="none" stroke="#00A79D" stroke-width="7" stroke-linecap="round" opacity="0.95"/><circle cx="1058" cy="336" r="22" fill="#00A79D"/><g transform="translate(75 62) scale(0.875)"><path d="M 255 510 C 350 415, 505 385, 620 440 C 760 505, 875 475, 930 390" fill="none" stroke="#00A79D" stroke-width="24" stroke-linecap="round" opacity="0.96"/><path d="M 300 510 C 390 575, 525 600, 650 560 C 760 525, 840 465, 900 400" fill="none" stroke="#00A79D" stroke-width="7" stroke-linecap="round" opacity="0.65"/><circle cx="905" cy="395" r="15" fill="#004E9B"/>
+      <g filter="url(#softShadow)">
+        <rect x="455" y="545" width="260" height="42" rx="8" fill="#0B2342"/>
+        <rect x="463" y="590" width="244" height="20" rx="4" fill="#0B2342"/>
+        <rect x="463" y="615" width="244" height="18" rx="4" fill="#0B2342" opacity="0.92"/>
+        <path d="M470 640 H700 V725 H642 C625 725 615 714 615 697 V675 H555 V697 C555 714 545 725 528 725 H470 Z" fill="#0B2342"/>
+        <circle cx="585" cy="672" r="46" fill="#0B2342"/>
+        <circle cx="585" cy="672" r="28" fill="#FFFFFF" stroke="#C9D0D8" stroke-width="8"/>
+        <path d="M563 712 L535 790 L575 815 L610 815 L637 790 L607 712 Z" fill="#0B2342" stroke="#0B2342" stroke-width="8"/>
+        <circle cx="585" cy="790" r="22" fill="#FFFFFF" stroke="#0B2342" stroke-width="8"/>
+      </g>
+    
+      <path d="M515 170 C 500 250 390 335 390 455 C390 555 456 620 540 620 C625 620 688 555 688 462 C688 345 575 265 515 170 Z" fill="#004E9B"/>
+      <path d="M485 278 C445 338 427 393 432 457 C436 508 461 544 487 563" fill="none" stroke="#FFFFFF" stroke-width="15" opacity="0.28" stroke-linecap="round"/>
+      <text x="535" y="495" text-anchor="middle" font-family="DejaVu Sans, Arial, sans-serif" font-size="94" font-weight="700" fill="#FFFFFF">H<tspan baseline-shift="sub" font-size="56">2</tspan></text>
+    
+      <path d="M655 156 C700 225 690 280 735 330 C770 368 818 406 814 472 C810 549 756 604 676 625 C725 570 728 523 696 489 C672 464 648 444 655 405 C663 358 703 331 688 290 C679 265 662 234 655 156 Z" fill="#F59C00"/>
+      <path d="M711 330 C760 390 769 428 751 467 C736 498 714 514 694 529 C712 487 693 462 680 442 C666 420 680 386 711 330 Z" fill="#FFFFFF" opacity="0.95"/>
+    </g></g>
+    </svg>

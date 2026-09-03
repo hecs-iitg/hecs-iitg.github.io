@@ -1,30 +1,18 @@
-# HECS IITG Website — v3
+# HECS IITG Website — GitHub Ready v4
 
-A responsive static website for the Hydrogen, Energy and Combustion Systems Laboratory (HECS IITG), School of Energy Science and Engineering, IIT Guwahati.
+Final-branding website package for **HECS IITG — Hydrogen, Energy and Combustion Systems Laboratory**.
 
-## Pages
-- Home
-- Research
-- Projects
-- People
-- Publications (interactive search/filter)
-- Facilities
-- Join Us
-- Contact
-- 404
+## What changed
+- Final two-ring HECS IITG logo integrated across the site.
+- Horizontal logo used in the website header.
+- Primary circular logo featured in the homepage hero.
+- Updated favicon, Apple touch icon and social-preview image.
+- Pre-launch wording updated for November 2026.
+- PI designation shown as **Incoming Assistant Professor** until formal joining.
 
-## Important launch edits
-1. Replace `YOUR-DOMAIN` in `robots.txt` and `sitemap.xml`.
-2. Add the official IITG PI email and room/office number once assigned.
-3. Connect the contact form to an approved endpoint (or remove it).
-4. Replace the remote PI portrait URL with a local approved photograph if desired.
-5. Update facilities only after equipment is actually procured/commissioned.
-6. Add HECS-funded IITG projects only after funding is formally awarded.
+## GitHub Pages upload
+Upload every file in this folder directly to the root of `hecs-iitg/hecs-iitg.github.io`. Existing files with the same names can be replaced.
 
-## Source/accuracy notes
-- PI background/publication/project foundation was derived from https://dhkrnl.github.io/ (reviewed Sep 2026).
-- IITG School name/address are aligned with the official School of Energy Science and Engineering pages.
-- Pre-IITG projects are explicitly labelled so the site does not imply those grants belong to IIT Guwahati.
+After committing, wait 1–3 minutes and hard-refresh `https://hecs-iitg.github.io/`.
 
-## Deployment
-This site requires no build step. Upload the contents of this folder to GitHub Pages, IITG hosting, Netlify, Cloudflare Pages, etc.
+After formally joining IIT Guwahati, replace the pre-launch wording and `Incoming Assistant Professor` with `Assistant Professor`.
