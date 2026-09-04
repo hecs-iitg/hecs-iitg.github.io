@@ -1,6 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="300" viewBox="0 0 1600 300" role="img" aria-labelledby="title desc">
-  <title id="title">HECS IITG</title>
-  <desc id="desc">Hydrogen, Energy and Combustion Systems Laboratory, Indian Institute of Technology Guwahati</desc>
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="160" viewBox="0 0 900 160" role="img" aria-labelledby="title desc">
+  <title id="title">Hydrogen, Energy and Combustion Systems Laboratory — HECS IITG</title>
+  <desc id="desc">HECS IITG, School of Energy Science and Engineering, Indian Institute of Technology Guwahati</desc>
   <defs>
     <linearGradient id="drop" x1="0" y1="0" x2="1" y2="1">
       <stop offset="0" stop-color="#1593EA"/><stop offset="0.58" stop-color="#005BBB"/><stop offset="1" stop-color="#0B2342"/>
@@ -8,42 +8,36 @@
     <linearGradient id="flame" x1="0" y1="0" x2=".8" y2="1">
       <stop offset="0" stop-color="#FFB20D"/><stop offset=".55" stop-color="#FF8A00"/><stop offset="1" stop-color="#F04A00"/>
     </linearGradient>
-    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
-      <feDropShadow dx="0" dy="2" stdDeviation="2.2" flood-opacity=".12"/>
-    </filter>
   </defs>
 
-  <!-- Final HECS emblem, optimized for the site header -->
-  <g transform="translate(20 18)">
-    <circle cx="132" cy="132" r="118" fill="#fff" stroke="#0B2342" stroke-width="7"/>
-    <circle cx="132" cy="132" r="106" fill="none" stroke="#00A79D" stroke-width="4"/>
-    <circle cx="227" cy="60" r="8" fill="#00A79D"/>
-    <path d="M50 134 C79 109 108 105 134 117 C164 131 191 125 212 102" fill="none" stroke="#00A79D" stroke-width="8" stroke-linecap="round"/>
-    <path d="M59 143 C87 161 120 165 149 155 C177 145 196 128 212 103" fill="none" stroke="#00A79D" stroke-width="3" stroke-linecap="round" opacity=".55"/>
-    <path d="M109 49 C104 76 72 98 72 132 C72 161 91 180 116 180 C142 180 161 160 161 134 C161 101 128 76 109 49 Z" fill="url(#drop)" filter="url(#shadow)"/>
-    <text x="116" y="140" text-anchor="middle" font-family="Arial,DejaVu Sans,sans-serif" font-size="29" font-weight="800" fill="#fff">H<tspan baseline-shift="sub" font-size="17">2</tspan></text>
-    <path d="M151 47 C166 69 164 87 179 102 C191 115 205 127 204 146 C203 168 187 184 165 190 C179 174 179 158 170 148 C163 140 155 134 158 121 C161 106 173 99 168 86 C165 76 154 66 151 47 Z" fill="url(#flame)" filter="url(#shadow)"/>
-    <path d="M171 101 C185 118 188 129 182 140 C178 150 171 155 164 160 C170 148 165 140 161 134 C158 127 162 118 171 101 Z" fill="#fff" opacity=".95"/>
-    <g fill="#0B2342" filter="url(#shadow)">
-      <rect x="96" y="177" width="73" height="11" rx="3"/>
-      <rect x="99" y="192" width="67" height="6" rx="2"/>
-      <path d="M101 202 H164 V222 H147 C142 222 139 219 139 214 V209 H127 V214 C127 219 124 222 119 222 H101 Z"/>
-      <circle cx="133" cy="213" r="11"/>
-      <path d="M128 221 L121 241 L130 248 H137 L146 241 L139 221 Z"/>
+  <!-- HECS emblem -->
+  <g transform="translate(8 10)">
+    <circle cx="70" cy="70" r="62" fill="#fff" stroke="#0B2342" stroke-width="4.5"/>
+    <circle cx="70" cy="70" r="55" fill="none" stroke="#00A79D" stroke-width="2.5"/>
+    <circle cx="119" cy="32" r="4.5" fill="#00A79D"/>
+    <path d="M27 72 C43 58 58 56 71 62 C88 70 102 66 113 54" fill="none" stroke="#00A79D" stroke-width="4.5" stroke-linecap="round"/>
+    <path d="M35 75 C49 85 66 87 80 82 C96 77 106 68 114 55" fill="none" stroke="#00A79D" stroke-width="1.8" stroke-linecap="round" opacity=".6"/>
+    <path d="M58 29 C55 43 38 54 38 73 C38 89 49 100 62 100 C76 100 86 89 86 74 C86 56 69 43 58 29 Z" fill="url(#drop)"/>
+    <text x="62" y="78" text-anchor="middle" font-family="Arial,DejaVu Sans,sans-serif" font-size="15" font-weight="800" fill="#fff">H<tspan baseline-shift="sub" font-size="9">2</tspan></text>
+    <path d="M81 28 C90 40 88 50 97 59 C104 66 112 73 111 84 C110 96 102 105 89 108 C97 99 97 90 92 85 C88 81 84 77 86 70 C87 62 94 58 91 51 C89 45 83 38 81 28 Z" fill="url(#flame)"/>
+    <path d="M91 59 C99 68 101 75 98 81 C96 86 92 89 88 91 C91 84 89 80 87 77 C85 73 87 68 91 59 Z" fill="#fff"/>
+    <g fill="#0B2342">
+      <rect x="49" y="96" width="43" height="6.5" rx="1.7"/>
+      <rect x="51" y="105" width="39" height="3.6" rx="1"/>
+      <path d="M52 111 H89 V123 H79 C76 123 75 121 75 118 V116 H68 V118 C68 121 66 123 63 123 H52 Z"/>
+      <circle cx="71" cy="118" r="6"/>
+      <path d="M68 123 L64 135 L69 139 H73 L78 135 L74 123 Z"/>
     </g>
-    <circle cx="133" cy="213" r="6" fill="#fff" stroke="#C9D0D8" stroke-width="3"/>
-    <circle cx="133" cy="240" r="5" fill="#fff" stroke="#0B2342" stroke-width="3"/>
+    <circle cx="71" cy="118" r="3" fill="#fff"/>
+    <circle cx="71" cy="134" r="3" fill="#fff" stroke="#0B2342" stroke-width="1.5"/>
   </g>
 
-  <line x1="292" y1="46" x2="292" y2="254" stroke="#DCE7E7" stroke-width="2"/>
-  <line x1="304" y1="46" x2="304" y2="254" stroke="#00A79D" stroke-width="5"/>
-
-  <!-- Institutional wordmark -->
-  <g transform="translate(340 0)">
-    <text x="0" y="108" font-family="Arial,DejaVu Sans,sans-serif" font-size="91" font-weight="800" letter-spacing="2" fill="#0B2342">HECS</text>
-    <text x="276" y="108" font-family="Arial,DejaVu Sans,sans-serif" font-size="57" font-weight="800" letter-spacing="9" fill="#00A79D">IITG</text>
-    <text x="2" y="160" font-family="Arial,DejaVu Sans,sans-serif" font-size="31" font-weight="750" letter-spacing=".5" fill="#0B2342">Hydrogen, Energy &amp; Combustion Systems Laboratory</text>
-    <text x="2" y="205" font-family="Arial,DejaVu Sans,sans-serif" font-size="25" font-weight="650" fill="#506672">School of Energy Science and Engineering</text>
-    <text x="2" y="242" font-family="Arial,DejaVu Sans,sans-serif" font-size="25" font-weight="700" fill="#0B2342">Indian Institute of Technology Guwahati</text>
+  <!-- Institutional wordmark: lab name is primary -->
+  <g transform="translate(154 15)">
+    <text x="0" y="39" font-family="Inter,Arial,DejaVu Sans,sans-serif" font-size="36" font-weight="850" letter-spacing="-.6" fill="#0B2342">Hydrogen, Energy &amp; Combustion</text>
+    <text x="0" y="82" font-family="Inter,Arial,DejaVu Sans,sans-serif" font-size="36" font-weight="850" letter-spacing="-.6" fill="#0B2342">Systems Laboratory</text>
+    <line x1="0" y1="98" x2="66" y2="98" stroke="#00A79D" stroke-width="4"/>
+    <text x="80" y="104" font-family="Inter,Arial,DejaVu Sans,sans-serif" font-size="20" font-weight="900" letter-spacing="2.8" fill="#00A79D">HECS IITG</text>
+    <text x="0" y="133" font-family="Inter,Arial,DejaVu Sans,sans-serif" font-size="14.5" font-weight="650" fill="#5F7180">School of Energy Science and Engineering · Indian Institute of Technology Guwahati</text>
   </g>
 </svg>
