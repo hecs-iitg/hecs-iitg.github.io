@@ -9,12 +9,6 @@
   "description": "Hydrogen, Energy and Combustion Systems Laboratory, IIT Guwahati.",
   "icons": [
     {
-      "src": "/hecs-iitg-icon.svg",
-      "sizes": "any",
-      "type": "image/svg+xml",
-      "purpose": "any"
-    },
-    {
       "src": "/favicon-32x32.png",
       "sizes": "32x32",
       "type": "image/png"
@@ -25,9 +19,16 @@
       "type": "image/png"
     },
     {
+      "src": "/hecs-logo-320.png",
+      "sizes": "320x320",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
       "src": "/android-chrome-512x512.png",
       "sizes": "512x512",
-      "type": "image/png"
+      "type": "image/png",
+      "purpose": "any maskable"
     }
   ]
 }

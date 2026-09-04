@@ -64,6 +64,12 @@ body{overflow-x:hidden}.scroll-progress{position:fixed;inset:0 auto auto 0;width
 @media(max-width:600px){.hero-focus{font-size:.69rem}.hero-focus span{display:none}.research-chip{font-size:.68rem;padding:7px 9px}}
 @media(prefers-reduced-motion:reduce){.hero:after,.hero-kicker .dot,.hero h1 em:after,.scroll-cue i:after,.hero-logo-panel:after,.hero-logo-glow,.hero-logo,.hero-particle,.page-hero,.page-hero:after,.cta{animation:none!important}.hero-grid>div:first-child{animation:none}.interactive-card{transform:none!important}.scroll-progress{display:none}.fade{opacity:1;transform:none;transition:none}.back-to-top{transition:none}}
 
+/* <picture> must not become the layout box — the img keeps every existing
+   rule (percentage widths, flex behaviour, max-height) that targets it. */
+picture{display:contents}
+/* the hero badge is circular — never let a height constraint squash it */
+.hero-logo{height:auto;aspect-ratio:1/1;object-fit:contain}
+
 /* ==========================================================================
    Institutional masthead
    Moved out of main.js (it used to rebuild the header at runtime, which made
