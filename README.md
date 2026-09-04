@@ -14,6 +14,17 @@ Website for **HECS IITG — Hydrogen, Energy and Combustion Systems Laboratory**
 - Pre-launch wording for the laboratory's planned November 2026 start at IIT Guwahati.
 - PI designation shown as **Incoming Assistant Professor** until formal joining.
 
+## Editing
+
+After changing `style.css` or `main.js`, run:
+
+    python3 stamp-assets.py
+
+It rewrites the `?v=` hash on those two files in every page. GitHub Pages serves
+assets with `cache-control: max-age=600` while revalidating HTML separately, so
+without the hash a returning visitor can load new HTML against a cached old
+stylesheet - which renders the page unstyled.
+
 ## Deployment
 This repository is published with GitHub Pages at:
 
