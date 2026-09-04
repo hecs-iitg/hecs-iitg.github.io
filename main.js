@@ -1,3 +1,104 @@
+// HECS IITG institutional two-level masthead.
+// This is built from the existing navigation so every page stays consistent.
+(() => {
+  const header = document.querySelector('.site-header');
+  if (!header) return;
+
+  const oldNav = header.querySelector('.nav-links');
+  const navHTML = oldNav ? oldNav.innerHTML : '';
+  document.querySelector('.utility')?.remove();
+
+  header.innerHTML = `
+    <div class="lab-masthead">
+      <div class="container lab-masthead-inner">
+        <a class="lab-emblem-link" href="index.html" aria-label="HECS IITG home">
+          <img class="lab-emblem" src="hecs-iitg-icon.svg?v=20260903" alt="HECS IITG emblem">
+        </a>
+        <div class="lab-identity">
+          <div class="lab-title">Hydrogen, Energy &amp; Combustion Systems Laboratory</div>
+          <div class="lab-meta-line">
+            <strong class="lab-acronym">HECS IITG</strong>
+            <span class="lab-divider" aria-hidden="true"></span>
+            <span class="lab-school">School of Energy Science and Engineering</span>
+          </div>
+          <a class="lab-institute" href="https://www.iitg.ac.in/" target="_blank" rel="noreferrer">Indian Institute of Technology Guwahati ↗</a>
+        </div>
+      </div>
+    </div>
+    <div class="lab-navrow">
+      <div class="container lab-nav-inner">
+        <nav class="nav-links" aria-label="Primary navigation">${navHTML}</nav>
+        <button class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">Menu</button>
+      </div>
+    </div>`;
+
+  const style = document.createElement('style');
+  style.id = 'hecs-institutional-header-styles';
+  style.textContent = `
+    .utility{display:none!important}
+    .site-header{position:sticky;top:0;z-index:80;background:#fff;border:0!important;box-shadow:0 1px 0 rgba(11,35,66,.10);backdrop-filter:none!important}
+    .lab-masthead{max-height:132px;overflow:hidden;background:#fff;opacity:1;transition:max-height .38s ease,opacity .28s ease,transform .38s ease}
+    .lab-masthead-inner{min-height:118px;display:flex;align-items:center;gap:22px;padding-top:10px;padding-bottom:10px}
+    .lab-emblem-link{display:flex;align-items:center;justify-content:center;flex:0 0 auto}
+    .lab-emblem{width:92px;height:92px;object-fit:contain;filter:drop-shadow(0 4px 12px rgba(11,35,66,.08))}
+    .lab-identity{min-width:0;display:flex;flex-direction:column;justify-content:center}
+    .lab-title{color:#0B2342;font-size:clamp(1.55rem,2.15vw,2.12rem);font-weight:900;letter-spacing:-.035em;line-height:1.08;white-space:nowrap}
+    .lab-meta-line{display:flex;align-items:center;gap:12px;margin-top:8px;min-width:0}
+    .lab-acronym{color:#00A79D;font-size:.98rem;font-weight:900;letter-spacing:.115em;white-space:nowrap}
+    .lab-divider{width:1px;height:18px;background:rgba(11,35,66,.20);flex:0 0 auto}
+    .lab-school{color:#425866;font-size:.84rem;font-weight:750;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+    .lab-institute{display:inline-block;width:max-content;max-width:100%;margin-top:2px;color:#667984;font-size:.78rem;font-weight:650;transition:color .18s ease}
+    .lab-institute:hover{color:#004E9B}
+    .lab-navrow{background:linear-gradient(90deg,#0B2342 0%,#0D3449 62%,#0B4C56 100%);border-top:1px solid rgba(0,167,157,.14);box-shadow:0 4px 16px rgba(7,28,37,.08)}
+    .lab-nav-inner{min-height:53px;display:flex;align-items:center;justify-content:flex-end;position:relative}
+    .lab-navrow .nav-links{display:flex;align-items:center;gap:3px}
+    .lab-navrow .nav-links a{color:#E5EFF1;background:transparent!important;border-radius:8px;padding:10px 11px;font-size:.86rem;font-weight:780;transition:color .18s ease,background .18s ease,transform .18s ease}
+    .lab-navrow .nav-links a:hover{color:#fff;background:rgba(255,255,255,.08)!important;transform:translateY(-1px)}
+    .lab-navrow .nav-links a.active{color:#fff;background:rgba(0,167,157,.22)!important}
+    .lab-navrow .nav-links a:after{bottom:3px;background:linear-gradient(90deg,#61D7CE,#F59C00)}
+    .lab-navrow .menu-toggle{display:none;color:#fff;border-color:rgba(255,255,255,.26);background:rgba(255,255,255,.08)}
+    .site-header.is-scrolled .lab-masthead{max-height:0;opacity:0;transform:translateY(-8px)}
+    .site-header.is-scrolled .lab-navrow{box-shadow:0 10px 28px rgba(7,28,37,.18)}
+    .site-header.is-scrolled .lab-nav-inner{min-height:50px}
+    .site-header.is-scrolled .nav{height:auto!important}
+
+    @media(max-width:1120px){
+      .lab-emblem{width:78px;height:78px}
+      .lab-masthead-inner{min-height:104px;gap:17px}
+      .lab-title{font-size:clamp(1.35rem,2.2vw,1.8rem)}
+      .lab-school{font-size:.78rem}
+      .lab-navrow .nav-links a{padding:9px 8px;font-size:.80rem}
+    }
+    @media(max-width:880px){
+      .lab-masthead{max-height:116px}
+      .lab-masthead-inner{min-height:100px;gap:14px;padding-top:8px;padding-bottom:8px}
+      .lab-emblem{width:70px;height:70px}
+      .lab-title{font-size:clamp(1.12rem,4vw,1.5rem);white-space:normal}
+      .lab-meta-line{gap:8px;margin-top:6px;flex-wrap:wrap}
+      .lab-school{white-space:normal;font-size:.73rem}
+      .lab-institute{font-size:.71rem}
+      .lab-nav-inner{min-height:50px;justify-content:flex-end}
+      .lab-navrow .menu-toggle{display:block!important}
+      .lab-navrow .nav-links{display:none!important;position:absolute;z-index:100;top:calc(100% + 8px);left:0;right:0;flex-direction:column;align-items:stretch;gap:2px;padding:9px;background:#0B2342;border:1px solid rgba(255,255,255,.10);border-radius:14px;box-shadow:0 18px 45px rgba(7,28,37,.28)}
+      .lab-navrow .nav-links.open{display:flex!important}
+      .lab-navrow .nav-links a{width:100%;padding:11px 13px}
+    }
+    @media(max-width:560px){
+      .lab-masthead{max-height:124px}
+      .lab-masthead-inner{min-height:108px;gap:11px}
+      .lab-emblem{width:58px;height:58px}
+      .lab-title{font-size:1.05rem;line-height:1.12}
+      .lab-acronym{font-size:.76rem}
+      .lab-divider{display:none}
+      .lab-school{width:100%;font-size:.68rem;line-height:1.2}
+      .lab-institute{font-size:.66rem}
+    }
+    @media(prefers-reduced-motion:reduce){
+      .lab-masthead{transition:none}
+    }`;
+  document.head.appendChild(style);
+})();
+
 const reduceMotion=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 const finePointer=window.matchMedia('(hover: hover) and (pointer: fine)').matches;
 
