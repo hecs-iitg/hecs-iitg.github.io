@@ -24,10 +24,7 @@
           <a class="lab-institute" href="https://www.iitg.ac.in/" target="_blank" rel="noreferrer">Indian Institute of Technology Guwahati ↗</a>
         </div>
         <a class="iitg-brand-link" href="https://www.iitg.ac.in/" target="_blank" rel="noreferrer" aria-label="Indian Institute of Technology Guwahati website">
-          <picture>
-            <source media="(max-width: 880px)" srcset="https://www.iitg.ac.in/img/iitgfooter.png">
-            <img class="iitg-brand" src="https://www.iitg.ac.in/core/img/iitglogo.jpg" alt="Indian Institute of Technology Guwahati">
-          </picture>
+          <img class="iitg-brand" src="logo_IITG/IIT_Guwahati_idFJ5xOu5H_1.svg" alt="Indian Institute of Technology Guwahati logo">
         </a>
       </div>
     </div>
@@ -44,7 +41,7 @@
     .utility{display:none!important}
     .site-header{position:sticky;top:0;z-index:80;background:#fff;border:0!important;box-shadow:0 1px 0 rgba(11,35,66,.10);backdrop-filter:none!important}
     .lab-masthead{max-height:132px;overflow:hidden;background:#fff;opacity:1;transition:max-height .38s ease,opacity .28s ease,transform .38s ease}
-    .lab-masthead-inner{min-height:118px;display:grid;grid-template-columns:auto minmax(0,1fr) minmax(250px,360px);align-items:center;gap:22px;padding-top:10px;padding-bottom:10px}
+    .lab-masthead-inner{min-height:118px;display:grid;grid-template-columns:92px minmax(0,1fr) 92px;align-items:center;gap:22px;padding-top:10px;padding-bottom:10px}
     .lab-emblem-link{display:flex;align-items:center;justify-content:center;flex:0 0 auto}
     .lab-emblem{width:92px;height:92px;object-fit:contain;filter:drop-shadow(0 4px 12px rgba(11,35,66,.08))}
     .lab-identity{min-width:0;display:flex;flex-direction:column;justify-content:center}
@@ -56,8 +53,7 @@
     .lab-institute{display:inline-block;width:max-content;max-width:100%;margin-top:2px;color:#667984;font-size:.78rem;font-weight:650;transition:color .18s ease}
     .lab-institute:hover{color:#004E9B}
     .iitg-brand-link{display:flex;align-items:center;justify-content:flex-end;min-width:0;padding-left:22px;border-left:1px solid rgba(11,35,66,.14)}
-    .iitg-brand-link picture{display:flex;align-items:center;justify-content:flex-end;width:100%}
-    .iitg-brand{width:min(100%,360px);height:auto;max-height:74px;object-fit:contain;object-position:right center}
+    .iitg-brand{width:92px;height:92px;object-fit:contain;filter:drop-shadow(0 4px 12px rgba(11,35,66,.08))}
     .lab-navrow{background:linear-gradient(90deg,#0B2342 0%,#0D3449 62%,#0B4C56 100%);border-top:1px solid rgba(0,167,157,.14);box-shadow:0 4px 16px rgba(7,28,37,.08)}
     .lab-nav-inner{min-height:53px;display:flex;align-items:center;justify-content:flex-end;position:relative}
     .lab-navrow .nav-links{display:flex;align-items:center;gap:3px}
@@ -73,10 +69,11 @@
 
     @media(max-width:1120px){
       .lab-emblem{width:78px;height:78px}
-      .lab-masthead-inner{min-height:104px;grid-template-columns:auto minmax(0,1fr) minmax(220px,300px);gap:17px}
+      .lab-masthead-inner{min-height:104px;grid-template-columns:78px minmax(0,1fr) 78px;gap:17px}
       .lab-title{font-size:clamp(1.35rem,2.2vw,1.8rem)}
       .lab-school{font-size:.78rem}
       .iitg-brand-link{padding-left:17px}
+      .iitg-brand{width:78px;height:78px}
       .lab-navrow .nav-links a{padding:9px 8px;font-size:.80rem}
     }
     @media(max-width:880px){
