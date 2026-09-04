@@ -84,17 +84,18 @@ body{overflow-x:hidden}.scroll-progress{position:fixed;inset:0 auto auto 0;width
 }
 .lab-emblem-link{display:flex;align-items:center;justify-content:center;flex:0 0 auto}
 .lab-emblem{width:152px;height:152px;object-fit:contain;filter:drop-shadow(0 4px 12px rgba(11,35,66,.08))}
-.lab-identity{min-width:0;display:flex;flex-direction:column;justify-content:center}
+.lab-identity{min-width:0;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center}
 .lab-title{
   color:#0B2342;font-size:clamp(1.55rem,2.15vw,2.12rem);font-weight:900;
   letter-spacing:-.035em;line-height:1.08;white-space:nowrap;
+  text-wrap:balance;
 }
-.lab-meta-line{display:flex;align-items:center;gap:12px;margin-top:8px;min-width:0}
+.lab-meta-line{display:flex;align-items:center;justify-content:center;gap:12px;margin-top:8px;min-width:0}
 .lab-acronym{color:var(--teal);font-size:.98rem;font-weight:900;letter-spacing:.115em;white-space:nowrap}
 .lab-divider{width:1px;height:18px;background:rgba(11,35,66,.20);flex:0 0 auto}
 .lab-school{color:#425866;font-size:.84rem;font-weight:750;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .lab-institute{
-  display:inline-block;width:max-content;max-width:100%;margin-top:2px;
+  display:inline-block;width:max-content;max-width:100%;margin:2px auto 0;
   color:#5d6f79;font-size:.78rem;font-weight:650;transition:color .18s ease;
 }
 .lab-institute:hover{color:var(--brand-blue)}
@@ -144,7 +145,8 @@ body{overflow-x:hidden}.scroll-progress{position:fixed;inset:0 auto auto 0;width
   .lab-masthead-inner{min-height:134px;grid-template-columns:auto minmax(0,1fr) 106px;gap:14px}
   .lab-emblem,.iitg-brand{width:106px;height:106px}
   .lab-title{font-size:clamp(1.12rem,4vw,1.5rem);white-space:normal}
-  .lab-meta-line{gap:8px;margin-top:6px;flex-wrap:wrap}
+  .lab-meta-line{gap:8px;margin-top:6px;flex-wrap:wrap;justify-content:center}
+  .lab-divider{display:none}
   .lab-school{white-space:normal;font-size:.73rem}
   .lab-institute{display:none}
   .iitg-brand-link{padding-left:12px}
