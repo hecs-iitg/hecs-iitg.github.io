@@ -348,3 +348,7 @@ select:focus-visible,textarea:focus-visible,[tabindex]:focus-visible{
   .rmap-node{transition:none}
   .rmap-node:hover,.rmap-node:focus-visible{transform:translate(-50%,-50%)}
 }
+
+/* white cards sitting on a dark section must not inherit its white text */
+.section-dark .card{color:var(--ink)}
+.section-dark .card .tag{background:var(--soft);color:#20575b}
