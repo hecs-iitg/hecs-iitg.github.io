@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://YOUR-DOMAIN/index.html</loc></url>
-  <url><loc>https://YOUR-DOMAIN/research.html</loc></url>
-  <url><loc>https://YOUR-DOMAIN/projects.html</loc></url>
-  <url><loc>https://YOUR-DOMAIN/people.html</loc></url>
-  <url><loc>https://YOUR-DOMAIN/publications.html</loc></url>
-  <url><loc>https://YOUR-DOMAIN/facilities.html</loc></url>
-  <url><loc>https://YOUR-DOMAIN/opportunities.html</loc></url>
-  <url><loc>https://YOUR-DOMAIN/contact.html</loc></url>
+  <url><loc>https://hecs-iitg.github.io/</loc><changefreq>monthly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://hecs-iitg.github.io/research.html</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://hecs-iitg.github.io/projects.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://hecs-iitg.github.io/people.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://hecs-iitg.github.io/publications.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://hecs-iitg.github.io/facilities.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://hecs-iitg.github.io/resources.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://hecs-iitg.github.io/news.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://hecs-iitg.github.io/teaching.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://hecs-iitg.github.io/opportunities.html</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://hecs-iitg.github.io/contact.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
 </urlset>
