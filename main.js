@@ -134,26 +134,6 @@ if (rnodes.length && focusText) {
   });
 }
 
-// --- Count-up for numeric research stats ------------------------------------
-const countEls = [...document.querySelectorAll('.count-value[data-count]')];
-const animateCount = el => {
-  const target = Math.max(0, Number(el.dataset.count) || 0);
-  if (reduceMotion) { el.textContent = String(target); return; }
-  const start = performance.now(), duration = 900;
-  const step = now => {
-    const t = Math.min(1, (now - start) / duration);
-    el.textContent = String(Math.round(target * (1 - Math.pow(1 - t, 3))));
-    if (t < 1) requestAnimationFrame(step);
-  };
-  requestAnimationFrame(step);
-};
-if ('IntersectionObserver' in window && !reduceMotion) {
-  const cio = new IntersectionObserver(entries => entries.forEach(e => {
-    if (e.isIntersecting) { animateCount(e.target); cio.unobserve(e.target); }
-  }), { threshold: .65 });
-  countEls.forEach(el => { el.textContent = '0'; cio.observe(el); });
-}
-
 // --- Lightweight 3D tilt + cursor spotlight on major cards ------------------
 const interactive = [...document.querySelectorAll('.pillar,.project-card,.pi-card,.feature-panel,.person-card,.contact-card,.brief')];
 interactive.forEach(el => el.classList.add('interactive-card'));
