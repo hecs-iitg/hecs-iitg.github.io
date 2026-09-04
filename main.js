@@ -205,4 +205,20 @@ filterBtns.forEach(btn=>btn.addEventListener('click',()=>{filterBtns.forEach(b=>
 if(search)search.addEventListener('input',applyPubFilters);
 
 const form=document.querySelector('#contact-form');
-if(form){form.addEventListener('submit',e=>{e.preventDefault();const note=document.querySelector('#form-note');if(note){note.hidden=false;note.textContent='Form sending is intentionally disabled in this preview. Connect an IITG email/form endpoint before launch.';}})}
+if(form){
+  const recipient='dhananjayk.iitk@gmail.com';
+  form.addEventListener('submit',e=>{
+    e.preventDefault();
+    if(!form.reportValidity())return;
+    const data=new FormData(form);
+    const name=String(data.get('name')||'').trim();
+    const email=String(data.get('email')||'').trim();
+    const topic=String(data.get('topic')||'General enquiry').trim();
+    const message=String(data.get('message')||'').trim();
+    const subject=`HECS IITG enquiry: ${topic}`;
+    const body=[`Name: ${name}`,`Email: ${email}`,`Enquiry type: ${topic}`,'',message].join('\n');
+    const note=document.querySelector('#form-note');
+    if(note){note.hidden=false;note.textContent='Opening your email app with the enquiry ready to send…';}
+    window.location.href=`mailto:${recipient}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+  });
+}
