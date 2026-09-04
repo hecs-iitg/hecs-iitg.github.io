@@ -40,10 +40,10 @@
   style.textContent = `
     .utility{display:none!important}
     .site-header{position:sticky;top:0;z-index:80;background:#fff;border:0!important;box-shadow:0 1px 0 rgba(11,35,66,.10);backdrop-filter:none!important}
-    .lab-masthead{max-height:148px;overflow:hidden;background:#fff;opacity:1;transition:max-height .38s ease,opacity .28s ease,transform .38s ease}
-    .lab-masthead-inner{min-height:134px;display:grid;grid-template-columns:112px minmax(0,1fr) 112px;align-items:center;gap:22px;padding-top:10px;padding-bottom:10px}
+    .lab-masthead{max-height:184px;overflow:hidden;background:#fff;opacity:1;transition:max-height .38s ease,opacity .28s ease,transform .38s ease}
+    .lab-masthead-inner{min-height:168px;display:grid;grid-template-columns:152px minmax(0,1fr) 152px;align-items:center;gap:22px;padding-top:8px;padding-bottom:8px}
     .lab-emblem-link{display:flex;align-items:center;justify-content:center;flex:0 0 auto}
-    .lab-emblem{width:112px;height:112px;object-fit:contain;filter:drop-shadow(0 4px 12px rgba(11,35,66,.08))}
+    .lab-emblem{width:152px;height:152px;object-fit:contain;filter:drop-shadow(0 4px 12px rgba(11,35,66,.08))}
     .lab-identity{min-width:0;display:flex;flex-direction:column;justify-content:center}
     .lab-title{color:#0B2342;font-size:clamp(1.55rem,2.15vw,2.12rem);font-weight:900;letter-spacing:-.035em;line-height:1.08;white-space:nowrap}
     .lab-meta-line{display:flex;align-items:center;gap:12px;margin-top:8px;min-width:0}
@@ -53,7 +53,7 @@
     .lab-institute{display:inline-block;width:max-content;max-width:100%;margin-top:2px;color:#667984;font-size:.78rem;font-weight:650;transition:color .18s ease}
     .lab-institute:hover{color:#004E9B}
     .iitg-brand-link{display:flex;align-items:center;justify-content:flex-end;min-width:0;padding-left:22px;border-left:1px solid rgba(11,35,66,.14)}
-    .iitg-brand{width:112px;height:112px;object-fit:contain;filter:drop-shadow(0 4px 12px rgba(11,35,66,.08))}
+    .iitg-brand{width:152px;height:152px;object-fit:contain;filter:drop-shadow(0 4px 12px rgba(11,35,66,.08))}
     .lab-navrow{background:linear-gradient(90deg,#0B2342 0%,#0D3449 62%,#0B4C56 100%);border-top:1px solid rgba(0,167,157,.14);box-shadow:0 4px 16px rgba(7,28,37,.08)}
     .lab-nav-inner{min-height:53px;display:flex;align-items:center;justify-content:flex-end;position:relative}
     .lab-navrow .nav-links{display:flex;align-items:center;gap:3px}
@@ -68,24 +68,24 @@
     .site-header.is-scrolled .nav{height:auto!important}
 
     @media(max-width:1120px){
-      .lab-emblem{width:94px;height:94px}
-      .lab-masthead-inner{min-height:116px;grid-template-columns:94px minmax(0,1fr) 94px;gap:17px}
+      .lab-emblem{width:126px;height:126px}
+      .lab-masthead-inner{min-height:144px;grid-template-columns:126px minmax(0,1fr) 126px;gap:17px}
       .lab-title{font-size:clamp(1.35rem,2.2vw,1.8rem)}
       .lab-school{font-size:.78rem}
       .iitg-brand-link{padding-left:17px}
-      .iitg-brand{width:94px;height:94px}
+      .iitg-brand{width:126px;height:126px}
       .lab-navrow .nav-links a{padding:9px 8px;font-size:.80rem}
     }
     @media(max-width:880px){
-      .lab-masthead{max-height:128px}
-      .lab-masthead-inner{min-height:112px;grid-template-columns:auto minmax(0,1fr) 82px;gap:14px;padding-top:8px;padding-bottom:8px}
-      .lab-emblem{width:82px;height:82px}
+      .lab-masthead{max-height:150px}
+      .lab-masthead-inner{min-height:134px;grid-template-columns:auto minmax(0,1fr) 106px;gap:14px;padding-top:8px;padding-bottom:8px}
+      .lab-emblem{width:106px;height:106px}
       .lab-title{font-size:clamp(1.12rem,4vw,1.5rem);white-space:normal}
       .lab-meta-line{gap:8px;margin-top:6px;flex-wrap:wrap}
       .lab-school{white-space:normal;font-size:.73rem}
       .lab-institute{display:none}
       .iitg-brand-link{padding-left:12px}
-      .iitg-brand{width:82px;height:82px;object-fit:contain}
+      .iitg-brand{width:106px;height:106px;object-fit:contain}
       .lab-nav-inner{min-height:50px;justify-content:flex-end}
       .lab-navrow .menu-toggle{display:block!important}
       .lab-navrow .nav-links{display:none!important;position:absolute;z-index:100;top:calc(100% + 8px);left:0;right:0;flex-direction:column;align-items:stretch;gap:2px;padding:9px;background:#0B2342;border:1px solid rgba(255,255,255,.10);border-radius:14px;box-shadow:0 18px 45px rgba(7,28,37,.28)}
@@ -93,15 +93,15 @@
       .lab-navrow .nav-links a{width:100%;padding:11px 13px}
     }
     @media(max-width:560px){
-      .lab-masthead{max-height:106px}
-      .lab-masthead-inner{min-height:92px;grid-template-columns:60px minmax(0,1fr) 60px;gap:9px;padding-top:7px;padding-bottom:7px}
-      .lab-emblem{width:60px;height:60px}
+      .lab-masthead{max-height:126px}
+      .lab-masthead-inner{min-height:112px;grid-template-columns:72px minmax(0,1fr) 72px;gap:9px;padding-top:7px;padding-bottom:7px}
+      .lab-emblem{width:72px;height:72px}
       .lab-title{font-size:clamp(.84rem,4.2vw,1.02rem);line-height:1.12}
       .lab-meta-line{margin-top:5px}
       .lab-acronym{font-size:.64rem;letter-spacing:.09em}
       .lab-divider,.lab-school{display:none}
       .iitg-brand-link{padding-left:8px}
-      .iitg-brand{width:60px;height:60px}
+      .iitg-brand{width:72px;height:72px}
     }
     @media(prefers-reduced-motion:reduce){
       .lab-masthead{transition:none}
