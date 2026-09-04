@@ -206,19 +206,38 @@ if(search)search.addEventListener('input',applyPubFilters);
 
 const form=document.querySelector('#contact-form');
 if(form){
-  const recipient='dhananjayk.iitk@gmail.com';
-  form.addEventListener('submit',e=>{
+  const endpoint='https://api.web3forms.com/submit';
+  const accessKey='901bd330-999c-47d0-984b-c91ab7b7e0e7';
+  const submitButton=form.querySelector('button[type="submit"]');
+  const note=document.querySelector('#form-note');
+  const setFormStatus=(message,state)=>{
+    if(!note)return;
+    note.hidden=false;
+    note.textContent=message;
+    note.dataset.state=state;
+    note.setAttribute('role',state==='error'?'alert':'status');
+  };
+  form.addEventListener('submit',async e=>{
     e.preventDefault();
     if(!form.reportValidity())return;
     const data=new FormData(form);
-    const name=String(data.get('name')||'').trim();
-    const email=String(data.get('email')||'').trim();
     const topic=String(data.get('topic')||'General enquiry').trim();
-    const message=String(data.get('message')||'').trim();
-    const subject=`HECS IITG enquiry: ${topic}`;
-    const body=[`Name: ${name}`,`Email: ${email}`,`Enquiry type: ${topic}`,'',message].join('\n');
-    const note=document.querySelector('#form-note');
-    if(note){note.hidden=false;note.textContent='Opening your email app with the enquiry ready to send…';}
-    window.location.href=`mailto:${recipient}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    data.append('access_key',accessKey);
+    data.append('subject',`HECS IITG enquiry: ${topic}`);
+    data.append('from_name','HECS IITG website');
+    const originalLabel=submitButton?.textContent||'Send message';
+    if(submitButton){submitButton.disabled=true;submitButton.textContent='Sending…';}
+    setFormStatus('Sending your enquiry…','pending');
+    try{
+      const response=await fetch(endpoint,{method:'POST',body:data});
+      const result=await response.json().catch(()=>({success:false,message:'Submission failed'}));
+      if(!response.ok||!result.success)throw new Error(result.message||'Submission failed');
+      form.reset();
+      setFormStatus('Thank you—your enquiry has been sent successfully.','success');
+    }catch(error){
+      setFormStatus('We could not send your enquiry. Please try again in a moment.','error');
+    }finally{
+      if(submitButton){submitButton.disabled=false;submitButton.textContent=originalLabel;}
+    }
   });
 }
