@@ -1,18 +1,22 @@
-# HECS IITG Website — GitHub Ready v4
+# HECS IITG Website — Interactive v5
 
-Final-branding website package for **HECS IITG — Hydrogen, Energy and Combustion Systems Laboratory**.
+Website for **HECS IITG — Hydrogen, Energy and Combustion Systems Laboratory**.
 
-## What changed
-- Final two-ring HECS IITG logo integrated across the site.
-- Horizontal logo used in the website header.
-- Primary circular logo featured in the homepage hero.
-- Updated favicon, Apple touch icon and social-preview image.
-- Pre-launch wording updated for November 2026.
+## Current version
+- Final two-ring HECS IITG branding with hydrogen, combustion and engine/piston identity.
+- Interactive homepage with animated research-focus chips.
+- Floating logo/particle motion and pointer-responsive hero panel.
+- Scroll progress indicator and compact sticky header behavior.
+- Staggered section reveals and subtle interactive card effects.
+- Animated research statistics and button ripple feedback.
+- Publication search/filter interactions.
+- Responsive mobile navigation and reduced-motion accessibility support.
+- Pre-launch wording for the laboratory's planned November 2026 start at IIT Guwahati.
 - PI designation shown as **Incoming Assistant Professor** until formal joining.
 
-## GitHub Pages upload
-Upload every file in this folder directly to the root of `hecs-iitg/hecs-iitg.github.io`. Existing files with the same names can be replaced.
+## Deployment
+This repository is published with GitHub Pages at:
 
-After committing, wait 1–3 minutes and hard-refresh `https://hecs-iitg.github.io/`.
+https://hecs-iitg.github.io/
 
-After formally joining IIT Guwahati, replace the pre-launch wording and `Incoming Assistant Professor` with `Assistant Professor`.
+After formal joining at IIT Guwahati, update the pre-launch wording and replace **Incoming Assistant Professor** with **Assistant Professor**.
