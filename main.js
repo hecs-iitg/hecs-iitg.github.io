@@ -109,25 +109,30 @@ if (logoPanel && finePointer && !reduceMotion) {
   });
 }
 
-// --- Clickable research themes in the hero ----------------------------------
-const chips     = [...document.querySelectorAll('.research-chip')];
+// --- Hero research map ------------------------------------------------------
+// The six nodes are ordinary links and work without this; hovering or focusing
+// one just previews what that theme covers before you commit to the click.
+const rnodes    = [...document.querySelectorAll('.rmap-node')];
 const focusText = document.querySelector('.hero-focus-text');
-const toneMap   = { teal: '#00A79D', orange: '#F59C00', blue: '#004E9B' };
-chips.forEach(chip => chip.addEventListener('click', () => {
-  chips.forEach(c => { c.classList.remove('active'); c.setAttribute('aria-pressed', 'false'); });
-  chip.classList.add('active');
-  chip.setAttribute('aria-pressed', 'true');
-  const tone = toneMap[chip.dataset.tone] || '#00A79D';
-  logoPanel?.style.setProperty('--focus-color', tone);
-  document.documentElement.style.setProperty('--focus-color', tone);
-  if (focusText) {
+if (rnodes.length && focusText) {
+  const idle = focusText.textContent;
+  let timer;
+  const show = text => {
+    clearTimeout(timer);
     focusText.classList.add('is-changing');
-    setTimeout(() => {
-      focusText.textContent = chip.dataset.focus || chip.textContent;
+    timer = setTimeout(() => {
+      focusText.textContent = text;
       focusText.classList.remove('is-changing');
-    }, reduceMotion ? 0 : 150);
-  }
-}));
+    }, reduceMotion ? 0 : 130);
+  };
+  rnodes.forEach(n => {
+    const desc = n.dataset.focus || n.textContent.trim();
+    n.addEventListener('pointerenter', () => show(desc));
+    n.addEventListener('focus', () => show(desc));
+    n.addEventListener('pointerleave', () => show(idle));
+    n.addEventListener('blur', () => show(idle));
+  });
+}
 
 // --- Count-up for numeric research stats ------------------------------------
 const countEls = [...document.querySelectorAll('.count-value[data-count]')];

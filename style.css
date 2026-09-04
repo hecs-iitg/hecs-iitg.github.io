@@ -283,3 +283,68 @@ select:focus-visible,textarea:focus-visible,[tabindex]:focus-visible{
 @media(max-width:600px){
   .hero h1{font-size:2.4rem}
 }
+
+/* ==========================================================================
+   Hero research map
+   Six themes on a ring, each a real link into the matching research pillar.
+   Replaces the logo that used to sit here — it duplicated the masthead badge.
+   ========================================================================== */
+.visually-hidden{
+  position:absolute;width:1px;height:1px;margin:-1px;padding:0;
+  overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0;
+}
+.rmap-panel{padding:26px}
+.rmap-panel:after{display:none}          /* the panel's own spinning ring would fight the orbit */
+.rmap{
+  position:relative;z-index:2;width:min(100%,430px);aspect-ratio:1;margin:0 auto;
+}
+.rmap-lines{position:absolute;inset:0;width:100%;height:100%;overflow:visible}
+.rmap-ring{
+  fill:none;stroke:rgba(124,226,218,.30);stroke-width:1.5;stroke-dasharray:4 9;
+  transform-origin:50% 50%;animation:spinRing 46s linear infinite;
+}
+.rmap-spokes line{stroke:rgba(190,225,228,.30);stroke-width:1.5}
+.rmap-dot{opacity:.9}
+
+.rmap-core{
+  position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);
+  width:29%;aspect-ratio:1;border-radius:50%;z-index:3;
+  display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;
+  background:radial-gradient(circle at 38% 32%,#0d6b6a,#053f47 70%);
+  border:1px solid rgba(124,226,218,.5);
+  box-shadow:0 0 0 7px rgba(6,32,40,.55),0 14px 36px rgba(0,0,0,.32);
+}
+.rmap-core b{color:#fff;font-size:clamp(.95rem,3.4vw,1.32rem);font-weight:900;letter-spacing:-.02em;line-height:1}
+.rmap-core i{color:#7ce2da;font-style:normal;font-size:.62rem;font-weight:850;letter-spacing:.17em}
+
+.rmap-node{
+  position:absolute;left:var(--x);top:var(--y);transform:translate(-50%,-50%);
+  width:25.5%;aspect-ratio:1;border-radius:50%;z-index:4;
+  display:grid;place-items:center;text-align:center;padding:6px;
+  background:rgba(6,28,36,.80);
+  border:1.5px solid color-mix(in srgb,var(--a) 55%,transparent);
+  color:var(--a);font-size:clamp(.66rem,1.9vw,.82rem);font-weight:850;letter-spacing:.01em;
+  box-shadow:0 8px 22px rgba(0,0,0,.26);
+  transition:transform var(--motion-fast) ease,border-color var(--motion-fast) ease,
+             box-shadow var(--motion-fast) ease,background var(--motion-fast) ease;
+}
+.rmap-node:hover,.rmap-node:focus-visible{
+  transform:translate(-50%,-50%) scale(1.09);
+  background:rgba(8,38,48,.94);
+  border-color:var(--a);
+  box-shadow:0 0 0 5px color-mix(in srgb,var(--a) 16%,transparent),0 14px 30px rgba(0,0,0,.34);
+  outline:none;
+}
+.rmap-node:focus-visible{outline:2px solid var(--a);outline-offset:4px}
+.rmap-node span{display:block;line-height:1.15}
+
+@media(max-width:600px){
+  .rmap-panel{padding:18px}
+  .rmap{width:min(100%,320px)}
+  .rmap-node{width:25.5%;font-size:.62rem}
+}
+@media(prefers-reduced-motion:reduce){
+  .rmap-ring{animation:none}
+  .rmap-node{transition:none}
+  .rmap-node:hover,.rmap-node:focus-visible{transform:translate(-50%,-50%)}
+}
