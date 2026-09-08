@@ -144,7 +144,7 @@ if (logoPanel && finePointer && !reduceMotion) {
 // --- Hero research map ------------------------------------------------------
 // The six nodes are ordinary links and work without this; hovering or focusing
 // one just previews what that theme covers before you commit to the click.
-const rnodes    = [...document.querySelectorAll('.rmap-node')];
+const rnodes    = [...document.querySelectorAll('.rmap-node, .hfe-node')];
 const focusText = document.querySelector('.hero-focus-text');
 if (rnodes.length && focusText) {
   const idle = focusText.textContent;

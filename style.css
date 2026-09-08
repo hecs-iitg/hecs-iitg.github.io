@@ -425,3 +425,30 @@ select:focus-visible,textarea:focus-visible,[tabindex]:focus-visible{
 .dg-name{font-size:12.5px}
 .dg-cone{fill:#0e8f86;fill-opacity:.07;stroke:#0e8f86;stroke-width:1;stroke-dasharray:4 4;stroke-opacity:.5}
 .sc-mk3 path{fill:#b07f14}
+
+/* ------------------------------------------------------------
+   Home hero: fuels to chamber to engine figure (light on navy)
+   ------------------------------------------------------------ */
+.hfe{width:100%;max-width:440px;margin:0 auto}
+.hfe svg{display:block;width:100%;height:auto;overflow:visible}
+.hfe-node{cursor:pointer;transition:opacity .22s ease}
+.hfe:hover .hfe-node{opacity:.45}
+.hfe .hfe-node:hover,.hfe .hfe-node:focus-visible{opacity:1}
+.hfe-node:focus-visible{outline:2px solid #7ce2da;outline-offset:3px}
+.hfe-cyl{fill:rgba(255,255,255,.05);stroke:currentColor;stroke-width:1.4}
+.hfe-fuel{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:11px;fill:currentColor}
+.hfe-cap{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:9.5px;fill:#a9c6ca;letter-spacing:.04em}
+.hfe-title{font-size:11.5px;font-weight:700;fill:#e4f0f1}
+.hfe-feed path{fill:none;stroke:#7fa8ad;stroke-width:1.1;stroke-dasharray:4 4;opacity:.8}
+.hfe-vessel{fill:rgba(255,255,255,.04);stroke:#cfe3e6;stroke-width:1.6}
+.hfe-inj{fill:rgba(255,255,255,.12);stroke:#cfe3e6;stroke-width:1.3}
+.hfe-window{fill:none;stroke:#8fb4b9;stroke-width:1.2;stroke-dasharray:3 4}
+.hfe-spray{fill:#FFC46B;opacity:.36}
+.hfe-kernel{fill:#FF9A6C}
+.hfe-ring{fill:none;stroke:#FF9A6C;stroke-width:1.3;stroke-dasharray:5 4;opacity:.75}
+.hfe-piston{stroke:#cfe3e6;stroke-width:2.6}
+.hfe-crank{fill:none;stroke:#cfe3e6;stroke-width:1.4}
+.hfe-arrow{stroke:#7fa8ad;stroke-width:1.3}
+.hfe-mk path{fill:#7fa8ad}
+.f-h2{color:#5FD9CE} .f-ng{color:#7BB8F5} .f-me{color:#F7C85C} .f-am{color:#B0A5F7}
+@media (prefers-reduced-motion:reduce){.hfe-node{transition:none}}
