@@ -36,13 +36,25 @@ if (toggle && nav) {
 // --- Footer year -------------------------------------------------------------
 document.querySelectorAll('[data-year]').forEach(el => { el.textContent = new Date().getFullYear(); });
 
-// --- Scroll progress, compact header, back-to-top ---------------------------
+// --- Scroll progress, stable sticky navigation, back-to-top -----------------
 const progress = document.createElement('div');
 progress.className = 'scroll-progress';
 progress.setAttribute('aria-hidden', 'true');
 document.body.appendChild(progress);
 
 const header = document.querySelector('.site-header');
+const masthead = header?.querySelector('.lab-masthead');
+let mastheadHeight = 0;
+
+// Let the banner scroll out of view without removing its space from the page.
+// Collapsing its height on scroll can feed back into scroll anchoring and make
+// the page jump repeatedly near the old 18px threshold.
+const updateHeaderOffset = () => {
+  if (!header || !masthead) return;
+  mastheadHeight = masthead.getBoundingClientRect().height;
+  header.style.setProperty('--masthead-offset', `${-mastheadHeight}px`);
+};
+updateHeaderOffset();
 
 const topButton = document.createElement('button');
 topButton.type = 'button';
@@ -51,13 +63,33 @@ topButton.setAttribute('aria-label', 'Back to top');
 topButton.textContent = '↑';
 document.body.appendChild(topButton);
 
+let scrollUIQueued = false;
 const updateScrollUI = () => {
+  scrollUIQueued = false;
+  const y = Math.max(0, window.scrollY);
   const max = Math.max(1, document.documentElement.scrollHeight - window.innerHeight);
-  progress.style.transform = `scaleX(${Math.min(1, window.scrollY / max)})`;
-  header?.classList.toggle('is-scrolled', window.scrollY > 18);
-  topButton.classList.toggle('show', window.scrollY > 560);
+  progress.style.transform = `scaleX(${Math.min(1, y / max)})`;
+  // This class changes only the shadow, never the header's dimensions.
+  header?.classList.toggle('is-scrolled', y > 0 && y >= mastheadHeight);
+  topButton.classList.toggle('show', y > 560);
 };
-window.addEventListener('scroll', updateScrollUI, { passive: true });
+const queueScrollUI = () => {
+  if (scrollUIQueued) return;
+  scrollUIQueued = true;
+  window.requestAnimationFrame(updateScrollUI);
+};
+window.addEventListener('scroll', queueScrollUI, { passive: true });
+window.addEventListener('resize', () => {
+  updateHeaderOffset();
+  queueScrollUI();
+});
+if (masthead && 'ResizeObserver' in window) {
+  const headerObserver = new ResizeObserver(() => {
+    updateHeaderOffset();
+    queueScrollUI();
+  });
+  headerObserver.observe(masthead);
+}
 updateScrollUI();
 topButton.addEventListener('click', () => window.scrollTo({ top: 0, behavior: reduceMotion ? 'auto' : 'smooth' }));
 
