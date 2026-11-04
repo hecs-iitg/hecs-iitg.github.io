@@ -259,7 +259,7 @@ if (form) {
       form.reset();
       setFormStatus('Thank you — your enquiry has been sent. You will get a reply at the address you gave.', 'success');
     } catch (error) {
-      setFormStatus('We could not send your enquiry. Please try again, or email dkumar39@wisc.edu directly.', 'error');
+      setFormStatus('We could not send your enquiry. Please try again, or email dkumar26@iitg.ac.in directly.', 'error');
     } finally {
       if (submitButton) { submitButton.disabled = false; submitButton.textContent = originalLabel; }
     }
